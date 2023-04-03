@@ -1,6 +1,6 @@
 # SomiteExploreR
 
-##### This RData package contains the data collected from an experimental study designed to infer the time/period of formation of the first somites in the chick embryo. It also provides the algorithm used to infer the individual somite formation period.
+This RData package contains the data collected from an experimental study designed to infer the time/period of formation of the first somites in the chick embryo. It also provides the algorithm used to infer the individual somite formation period.
 
 These data were provided by Prof. Raquel P. Andrade (rgandrade@ualg.pt), and
 Ana Cristina Maia-Fernandes (a@gmail.com), from the Universidade do Algarve, Faro, Portugal.
@@ -39,8 +39,8 @@ This package provides 4 data-frames:
 
 - `embryo_lengths` | Contains the `time`(min), `length` (micrometers), `DevelTime` (Early or Late development, corresponding to somites 01-09, and somites 14-20, respectively), and `somite_id` per embryo (`embryo_id`).     
 - `somite_periods` | Contains the `somite_id`, `DevelTime`, `start_time` (time, in minutes, of the first frame where the new somite appears in the global development), `somite_position_mean` (the mean of the whole segmented region length (in micrometers) for all frames where each somite is visible - from the first frame where somite_n appears, to the last frame before somite_n+1 appears), and `somite_position_sd`, per embryo (`embryo_id`).     
-- `summary_stats_per_embryo` | Contains the summary statistics (mean, median, and standard deviation) for the period and length of individual somites **grouped by embryo** (`embryo_id`, `avg_somite_length`, `avg_somite_period`, `median_somite_length`, `median_somite_period`, `stdev_somite_length`, and `stdev_somite_period`).     
-- `summary_stats_per_somite` | Contains the summary statistics (mean, median, and standard deviation) for the period and length of individual somites **grouped by somite** (`somite_id`, `avg_somite_length`, `avg_somite_period`, `median_somite_length`, `median_somite_period`, `stdev_somite_length`, and `stdev_somite_period`).       
+- `summary_stats_per_embryo` | Contains the summary statistics (mean, median, and standard deviation) for the period and length of individual somites *grouped by embryo* (`embryo_id`, `avg_somite_length`, `avg_somite_period`, `median_somite_length`, `median_somite_period`, `stdev_somite_length`, and `stdev_somite_period`).     
+- `summary_stats_per_somite` | Contains the summary statistics (mean, median, and standard deviation) for the period and length of individual somites *grouped by somite* (`somite_id`, `avg_somite_length`, `avg_somite_period`, `median_somite_length`, `median_somite_period`, `stdev_somite_length`, and `stdev_somite_period`).       
 
 ## Usage
 
@@ -55,7 +55,7 @@ After loading the package, the 4 data tables will be available for the user, and
 
 In the `data-raw` folder, there are 3 files containing the raw data used to produce the data-frames provided by the `SomiteExplorerR` package ("embryo-measures-input-metadata.csv" "embryo-measures-input.csv", and "embryo-measures-input.xlsx")
 
-**Only the `csv_files` are used for the data analysis developed in this package.** 
+*Note | Only the `.csv` files are used for the data analysis developed in this package.* 
 
 ## Extra R code present in this repository
 
