@@ -1,0 +1,26 @@
+#' Embryo Lengths data
+#'
+#' \describe{
+#' \item{\bold{DATA DESCRIPTION:}}{
+#' Data measurements of the length (in micrometers) of the whole segmented
+#' region of chick embryos.
+#' Experiment | Wild-type chick embryos were grown in EC culture under a Lumar
+#' microscope, and live images were acquired every of 3 minutes up to a maximum
+#' of 53 hours of embryo development, covering development stages HH7 to HH13+
+#' (between 1 to 20 somites).
+#' This dataset contains the raw data collected by the researchers in the lab.}
+#'}
+#'
+#' @format A \code{data-frame} with 5 variables:
+#' \describe{
+#' \item{\code{embryo_id}}{Categorical variable identifying the embryo. Thirteen embryos were measured (EmbryoA-EmbryoM). Note: EmbryoJ and EmbryoK were separately measured for the early and late somites, labeled EmbryoJ1, EmbryoJ2, EmbryoK1, and EmbryoK2.}
+#' \item{\code{time}}{Time from the beginning of the live imaging (in minutes). Frame rate: 1 frame per 3 minutes.}
+#' \item{\code{length}}{Length of the total segmented region (in micrometers).}
+#' \item{\code{DevelTime}}{Categorical variable, indicating Early or Late development.}
+#' \item{\code{somite_id}}{Categorial variable indicating the somite number. Early somites: 01-09. Late somites: 14-20.}
+#'
+#' }
+#'
+#' For further details contact Isabel Duarte (\email{iduarte.scientist@@gmail.com}).
+#'
+"embryo_lengths"
