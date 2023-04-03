@@ -38,7 +38,7 @@ emb_length_metadata <-
   rename(embryo_id = Video)
 
 ## Add metadata column to data file
-emb_length <- left_join(emb_length, emb_length_metadata)
+emb_length <- left_join(emb_length, emb_length_metadata, by = "embryo_id")
 
 
 ## FUNCTION: Using an heuristic based on consecutive differences between lengths
