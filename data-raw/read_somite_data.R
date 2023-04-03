@@ -10,6 +10,8 @@
 #           Late somites, refers to somites 14-20.
 #####################################################
 
+## Code to prepare the datasets to export goes here
+
 library(tidyverse)
 library(here)
 
@@ -41,27 +43,10 @@ emb_length_metadata <-
 emb_length <- left_join(emb_length, emb_length_metadata, by = "embryo_id")
 
 
-## FUNCTION: Using an heuristic based on consecutive differences between lengths
-## A length difference between two consecutive points greater than the
-## delta_threshold is used to delimit a somite.
-
-segment <-
-  function(df,
-           delta_threshold = 50.,
-           x = 'time',
-           y = 'length') {
-    cutpoints <- c(-Inf, df[[x]][diff(df[[y]]) > delta_threshold], Inf)
-    labels <- sprintf("%02d", seq_len(length(cutpoints) - 1L))
-    group <-
-      as.character(cut(df[[x]], breaks = cutpoints, labels = labels))
-    df2 <- mutate(df, somite_id = group)
-    return(df2)
-  }
-
-## Apply the segment function to the embryo length data
+## Apply the segment2somites function (exported in this package) to the embryo length data
 emb_length %>%
   group_split(embryo_id) %>%
-  map_dfr(segment) %>%
+  map_dfr(segment2somites) %>%
   mutate(embryo_id = str_extract(embryo_id, 'Embryo.*')) %>%
   ## correct the somite number
   mutate (somite_id = case_when(
