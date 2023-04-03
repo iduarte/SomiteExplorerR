@@ -22,7 +22,7 @@ data_path_metadata <-
 
 ## Import data and tidy up
 emb_length <-
-  read_delim(file = data_path, delim = ';') %>%
+  read_delim(file = data_path, delim = ';', trim_ws = TRUE, col_types = "d") %>%
   gather(starts_with('Video'),
          key = 'embryo_id',
          value = 'length') %>%                       # Tidy up.
@@ -31,9 +31,10 @@ emb_length <-
   drop_na(length) %>%                                # Remove NA values, there's no use for them here.
   mutate(time = time * 60, length = length * 1000)   # Convert time to min, and length to micron.
 
+
 ## Import the metadata file with info about early and late somites
 emb_length_metadata <-
-  read_delim(file = data_path_metadata, delim = ';') %>%
+  read_delim(file = data_path_metadata, delim = ';', trim_ws = TRUE, col_types = "c") %>%
   rename(embryo_id = Video)
 
 ## Add metadata column to data file
