@@ -11,7 +11,7 @@ from Universidade do Algarve, Faro, Portugal.
 
 **Paper describing and discussing the data**
 
-Ana Cristina Maia-Fernandes, Ana Martins-Jesus, Tomás Pais-de-Azevedo, Ramiro Magno, Isabel Duarte, Raquel P. Andrade. Spatio-Temporal Dynamics of Early Somite Segmentation in the Chicken Embryo. 2023. (DOI: To be added after publication).
+Ana Cristina Maia-Fernandes, Ana Martins-Jesus, Tomás Pais-de-Azevedo, Ramiro Magno, Isabel Duarte, Raquel P. Andrade. Spatio-Temporal Dynamics of Early Somite Segmentation in the Chicken Embryo. 2023. (doi: https://doi.org/10.1101/2023.04.05.535703).
 (*Submitted*)   
 
 
