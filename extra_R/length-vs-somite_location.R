@@ -26,8 +26,11 @@ somites_location1_length <- car::leveneTest(somite_length ~ somite_location1,
 
 print(somites_location1_length)
 
-
-## Data visualization
+#
+##
+### Data visualization
+##
+#
 somite_lengths |>
   ggplot(aes(x = somite_location1, y = somite_length)) +
   geom_violin(aes(fill=somite_location1), colour="grey40", alpha=0.5,
@@ -66,7 +69,11 @@ somites_location2_length <-
                   center=median)
 print(somites_location2_length)
 
-## Data visualization
+#
+##
+### Data visualization
+##
+#
 somite_lengths |>
   ggplot(aes(x = somite_location2, y = somite_length)) +
   geom_violin(aes(fill=somite_location2), colour="grey40", alpha=0.5,
