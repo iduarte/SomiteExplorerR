@@ -7,7 +7,7 @@ Ana Cristina Maia-Fernandes (ac.maia.fernandes@gmail.com),
 from Universidade do Algarve, Faro, Portugal.
 
 
-### Citation | miRNA-seq
+### Citation
 
 **Paper describing and discussing the data**
 
@@ -66,8 +66,16 @@ In the `data-raw` folder, there are 3 files containing the raw data used to prod
 
 ## Extra R code present in this repository
 
-In the folder `extra_R` there is an R script (*"plot_somite_data.R"*) that creates several plots and visualizations to explore the datasets provided by the package.    
+In the folder `extra_R` there are five R scripts:
+
+  - **plot_somite_data.R**: creates several plots and visualizations to explore the datasets provided by the package.    
 It also has the R code used to produce the figures presented in the paper (see citation above).
+
+  - **length-vs-develtime.R**: Brown-Forsythe test (statistical test for the equality of group variances) for the **length** measurements per development time (early vs late).
+  - **length-vs-somite_location.R**: Brown-Forsythe test for the **length** per somite location (occipital, cervical, and trunk somites).
+  
+  - **period-vs-develtime.R**: Brown-Forsythe test for the inferred **period** per development time (early vs late).
+  - **period-vs-somite_location.R**: Brown-Forsythe test for the **period** per somite location (occipital, cervical, and trunk somites).
 
 
 
