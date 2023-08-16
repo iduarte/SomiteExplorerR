@@ -2,6 +2,7 @@ library(tidyverse)
 library(SomiteExploreR)
 library(car)
 library(ggbeeswarm)
+library(RColorBrewer)
 
 somite_lengths <-
   somite_periods |>
